@@ -1,4 +1,4 @@
-package org.apache.cordova.plugin;
+package org.apache.cordova.plugin.sleep;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
@@ -10,7 +10,7 @@ import org.json.JSONException;
 import android.content.Intent;
 
 public class SleepMode extends CordovaPlugin {
-	protected static final String TAG = "SleepAppPlugin";
+	protected static final String TAG = "SleepModePlugin";
 
 	@Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
