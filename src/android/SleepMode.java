@@ -14,6 +14,7 @@ public class SleepMode extends CordovaPlugin {
 
 	@Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+		final CallbackContext callbackContext = callbackContext;
 		if (action.equals("sleepApp")) {
 			try {				
 				Intent i = new Intent(Intent.ACTION_MAIN);
@@ -26,7 +27,6 @@ public class SleepMode extends CordovaPlugin {
 			}
 			this.cordova.getActivity().runOnUiThread(new Runnable() {
      			public void run() {
-     				final CallbackContext callbackContext = callbackContext;
          			callbackContext.success(); 
      			}
  			});
