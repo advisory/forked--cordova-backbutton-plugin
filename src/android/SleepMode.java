@@ -24,7 +24,7 @@ public class SleepMode extends CordovaPlugin {
 				LOG.e(TAG, "Exception occurred: ".concat(e.getMessage()));
 				return false;
 			}
-			this.cordova.getActivity().runOnUiThread(new Runnable() {
+			cordova.getActivity().runOnUiThread(new Runnable() {
      			public void run() {
          			callbackContext.success(); 
      			}
