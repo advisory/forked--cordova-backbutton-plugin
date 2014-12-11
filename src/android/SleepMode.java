@@ -10,7 +10,7 @@ import org.json.JSONException;
 import android.content.Intent;
 
 public class SleepMode extends CordovaPlugin {
-	protected static final String TAG = "SleepAppPlugin";
+	protected static final String TAG = "SleepModePlugin";
 
 	@Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
