@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="org.apache.cordova.plugin"
+    version="0.0.1">
+    <name>SleepMode</name>
+    <description>Cordova SleepMode Plugin</description>
+    <author>EAB</author>
+    <license>Apache 2.0</license>
+    <keywords>cordova,sleep,backbutton</keywords>
+    <js-module src="www/sleep-mode.js" name="SleepMode">
+        <clobbers target="cordova.plugins.sleepMode" />
+        <clobbers target="plugin.sleepMode" />
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="SleepMode">
+                <param name="android-package" value="org.apache.cordova.plugin.SleepMode"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/SleepMode.java" target-dir="src/org/apache/cordova/plugin/sleep" />
+    </platform>
+</plugin>
